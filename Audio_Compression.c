@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//Chage to 1 for Debugging mode and 0 otherwise
 #define DEBUG 1
 #define debug_print(fmt, ...)                    \
     do                                           \
@@ -21,12 +22,12 @@ int signum(int sample)
 {
     if (sample < 0)
     {
-        //debug_print("\nNegative\n");
+        debug_print("\nNegative\n");
         return (0); /* sign is ’0’ for negative samples */
     }
     else
     {
-        //debug_print("\nPositive\n");
+        debug_print("\nPositive\n");
         return (1); /* sign is ’1’ for positive samples */
     }
 }
@@ -37,7 +38,7 @@ int magnitude(int sample)
     {
         sample = -sample;
     }
-    //debug_print("Magnatude: %d", sample);
+    debug_print("Magnatude: %d", sample);
     return (sample);
 }
 
@@ -177,7 +178,6 @@ int Test(int sample)
 int main()
 {
     
-
     //Test(553);
     
     //Expected Results
